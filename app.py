@@ -24,9 +24,8 @@ with st.form("dental_form"):
     submit_button = st.form_submit_button(label="Gerar Landing Page 🚀")
 
 if submit_button:
-    # URL do template HTML bruto hospedado no seu repositório do GitHub
-    # ATENÇÃO: Substitua 'seu-usuario' e 'seu-repositorio' pelo seu GitHub real
-    github_template_url = "https://raw.githubusercontent.com/wikizzcomunicacao-byte/template/main/template.html"
+    # URL atualizada com o seu repositório correto 'templateo'
+    github_template_url = "https://raw.githubusercontent.com/wikizzcomunicacao-byte/templateo/main/template.html"
     
     try:
         # Baixa o template do GitHub
@@ -53,7 +52,7 @@ if submit_button:
             )
         else:
             st.error(f"Erro ao buscar o template no GitHub. Código de status: {response.status_code}")
-            st.info("Verifique se o arquivo `template.html` está público e no branch principal (`main`) do seu repositório.")
+            st.info("Verifique se o arquivo `template.html` está criado e público no repositório `templateo`.")
             
     except Exception as e:
         st.error(f"Ocorreu um erro de conexão: {e}")
