@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{BUSINESS_NAME}} | {{CITY}}</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090a0f',
+                        cardSurface: '#12141c',
+                        brandBlue: '#3b82f6',
+                        brandBlueGlow: 'rgba(59, 130, 246, 0.25)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-brandBlue selection:text-white overflow-x-hidden">
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 overflow-hidden bg-gradient-to-b from-black via-darkBg to-darkBg">
+        <!-- Background Car Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img src="./polimentotecnico.jpg" alt="Background {{BUSINESS_NAME}}" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/80 to-black/60"></div>
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-8">
+            <!-- Logo Badge -->
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-slate-900/80 border border-slate-700/60 p-2 shadow-2xl backdrop-blur-md flex items-center justify-center">
+                <div class="text-center">
+                    <span class="block text-base sm:text-lg font-black tracking-wider text-white">{{SHORT_NAME}}</span>
+                    <span class="block text-[7px] uppercase tracking-wider text-slate-400 font-semibold">ESTÉTICA AUTOMOTIVA</span>
+                </div>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white uppercase max-w-3xl leading-[1.15]">
+                SEU CARRO COM APARÊNCIA DE NOVO EM POUCAS HORAS — <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">BRILHO, PROTEÇÃO E VALORIZAÇÃO GARANTIDA</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-sm sm:text-base text-slate-400 max-w-xl font-normal">
+                Na {{BUSINESS_NAME}}, seu veículo e caminhão recebem tratamento profissional de alto padrão em {{CITY}}, muito além de uma lavagem comum.
+            </p>
+
+            <!-- CTA Button -->
+            <a href="https://wa.me/{{WHATSAPP}}" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-base shadow-xl shadow-brandBlue/30 hover:scale-105 transition-all duration-300">
+                <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+                Agendar agora pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER A EMPRESA? -->
+    <section class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-4 uppercase">
+                POR QUE ESCOLHER A <span class="text-brandBlue">{{SHORT_NAME}}</span>?
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base">
+                Diferente de lava-rápidos comuns, focamos em acabamento espelhado de alta qualidade, aspiração minuciosa e cuidado completo com a pintura.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-cardSurface border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-brandBlue/40 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-6">
+                    <i data-lucide="shield" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Proteção da pintura</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Contra desgaste, sol, chuva ácida e agentes externos.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-cardSurface border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-brandBlue/40 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-6">
+                    <i data-lucide="search" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Remoção profunda</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Eliminação de contaminações e sujeiras incrustadas.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-cardSurface border border-brandBlue/40 rounded-2xl p-6 flex flex-col justify-between shadow-lg shadow-brandBlue/5">
+                <div class="w-12 h-12 rounded-xl bg-brandBlue text-white flex items-center justify-center mb-6 shadow-md shadow-brandBlue/30">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Acabamento espelhado</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Especialidade em acabamento espelhado e enceramento profissional.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-cardSurface border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-brandBlue/40 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-6">
+                    <i data-lucide="trending-up" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Atendimento a veículos e caminhões</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Estrutura preparada para atender carros, utilitários e caminhões com excelência.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-cardSurface border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-brandBlue/40 transition-all md:col-span-2">
+                <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-6">
+                    <i data-lucide="star" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Aspiração interna detalhada</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Limpeza e aspiração interna rigorosa para deixar o habitáculo impecável e renovado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSSOS SERVIÇOS -->
+    <section class="py-24 px-4 max-w-7xl mx-auto bg-black/40 rounded-3xl my-12 border border-slate-900">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-4 uppercase">
+                NOSSOS <span class="text-brandBlue">SERVIÇOS</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Serv 1 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden flex flex-col group">
+                <div class="h-48 overflow-hidden">
+                    <img src="./polimentotecnico.jpg" alt="Polimento Técnico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1 justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Polimento Técnico</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Correção de riscos e imperfeições. Acabamento espelhado de alto padrão para brilho duradouro.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serv 2 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden flex flex-col group">
+                <div class="h-48 overflow-hidden">
+                    <img src="./higienizacaointerna.jpg" alt="Higienização Interna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1 justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Aspiração Interna</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Aspiração interna de veículos e caminhões com remoção completa de poeira e detritos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serv 3 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden flex flex-col group">
+                <div class="h-48 overflow-hidden">
+                    <img src="./lavagemdetalhada.jpeg" alt="Lavagem Detalhada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1 justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Lavagem Detalhada</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Processo manual cuidadoso, com produtos premium e atenção a cada detalhe da carroceria.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serv 4 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden flex flex-col group">
+                <div class="h-48 overflow-hidden">
+                    <img src="./cristalizacaovitrificacao.jpeg" alt="Enceramento / Proteção" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1 justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Enceramento Profissional</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Enceramento de carros e blindagem superficial para proteger a pintura contra ações do tempo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serv 5 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden flex flex-col group">
+                <div class="h-48 overflow-hidden">
+                    <img src="./revitalizacaodefarois.jpg" alt="Revitalização de Faróis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1 justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Revitalização de Faróis</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Faróis amarelados ou opacos voltam a ter transparência e segurança total na iluminação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANTES & DEPOIS COM SLIDER INTERATIVO -->
+    <section class="py-24 px-4 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-2 uppercase">ANTES & DEPOIS</h2>
+        <p class="text-slate-400 text-sm mb-12">Arraste para o lado e veja a transformação real entregue pela {{SHORT_NAME}}</p>
+
+        <div class="bg-cardSurface border border-slate-800 rounded-3xl p-6 shadow-2xl overflow-hidden relative flex justify-center">
+            <!-- Container do Slider Interativo -->
+            <div class="comparison-container relative w-full max-w-2xl h-[380px] sm:h-[450px] rounded-2xl overflow-hidden select-none cursor-ew-resize shadow-inner" id="comparisonSlider">
+                <!-- Imagem de DEPOIS (Fundo) -->
+                <img src="./foto_depois.jpg" alt="Depois" class="absolute inset-0 w-full h-full object-cover">
+                
+                <!-- Imagem de ANTES (Topo, cortada dinamicamente) -->
+                <div class="absolute inset-0 overflow-hidden" id="beforeImageWrapper" style="width: 50%;">
+                    <img src="./foto_antes.jpg" alt="Antes" class="absolute inset-0 w-full h-full object-cover max-w-none" id="beforeImg">
+                </div>
+
+                <!-- Barra divisória e botão de arraste -->
+                <div class="absolute top-0 bottom-0 w-1 bg-white shadow-2xl z-10 flex items-center justify-center" id="sliderDivider" style="left: 50%;">
+                    <div class="absolute w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-lg font-bold text-xs border-2 border-slate-700">
+                        ↔
+                    </div>
+                </div>
+
+                <!-- Tags Indicativas -->
+                <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full z-20 pointer-events-none border border-white/10">Antes</span>
+                <span class="absolute top-4 right-4 bg-blue-600/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full z-20 pointer-events-none border border-white/10">Depois</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- O QUE NOSSOS CLIENTES DIZEM -->
+    <section class="py-24 px-4 max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-16 text-center uppercase">O QUE NOSSOS CLIENTES DIZEM</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Review 1 -->
+            <div class="bg-cardSurface border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 gap-1 mb-4">★★★★★</div>
+                    <p class="text-slate-300 text-xs italic mb-4">"Meu carro saiu zero! O acabamento espelhado ficou espetacular. Recomendo demais!"</p>
+                </div>
+                <span class="text-xs font-bold text-white">Carlos M.</span>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-cardSurface border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 gap-1 mb-4">★★★★★</div>
+                    <p class="text-slate-300 text-xs italic mb-4">"Levei meu caminhão e o serviço de aspiração e limpeza foi impecável. Atenção incrível aos detalhes."</p>
+                </div>
+                <span class="text-xs font-bold text-white">João P.</span>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-cardSurface border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 gap-1 mb-4">★★★★★</div>
+                    <p class="text-slate-300 text-xs italic mb-4">"Vale cada centavo, polimento de primeira linha aqui na região."</p>
+                </div>
+                <span class="text-xs font-bold text-white">Ricardo S.</span>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="bg-cardSurface border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 gap-1 mb-4">★★★★★</div>
+                    <p class="text-slate-300 text-xs italic mb-4">"Profissionalismo de verdade. Meu veículo nunca esteve tão bem cuidado. Virei cliente fiel!"</p>
+                </div>
+                <span class="text-xs font-bold text-white">Fernanda L.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE A EMPRESA -->
+    <section class="py-24 px-4 max-w-6xl mx-auto">
+        <div class="bg-cardSurface border border-slate-800 rounded-3xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-700/50">
+                <img src="./empresa.jpg" alt="Fachada {{BUSINESS_NAME}}" class="w-full h-72 sm:h-80 object-cover">
+            </div>
+            <div class="flex flex-col gap-6">
+                <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">SOBRE A <span class="text-brandBlue">{{SHORT_NAME}}</span></h2>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    A {{BUSINESS_NAME}} nasceu da paixão por cuidar de veículos e da busca rigorosa por excelência. Nosso compromisso é entregar um resultado superior, com acabamento espelhado de alta qualidade, aspiração interna impecável e atendimento especializado para carros e caminhões.
+                </p>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    Somos referência em qualidade e confiança em {{CITY}}.
+                </p>
+
+                <!-- Metrics Grid -->
+                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800 text-center">
+                    <div>
+                        <span class="block text-lg sm:text-xl font-black text-white">1.000+</span>
+                        <span class="text-[10px] text-slate-400 uppercase tracking-wider">Veículos atendidos</span>
+                    </div>
+                    <div>
+                        <span class="block text-lg sm:text-xl font-black text-white">5★</span>
+                        <span class="text-[10px] text-slate-400 uppercase tracking-wider">Avaliação máxima</span>
+                    </div>
+                    <div>
+                        <span class="block text-lg sm:text-xl font-black text-white">100%</span>
+                        <span class="text-[10px] text-slate-400 uppercase tracking-wider">Satisfação</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORÇAMENTO DIRETO VIA WHATSAPP -->
+    <section id="orcamento" class="py-24 px-4 max-w-4xl mx-auto">
+        <div class="bg-cardSurface border border-brandBlue/30 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+            <!-- Glow background effect -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-brandBlue/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="text-center max-w-xl mx-auto mb-10 relative z-10">
+                <h2 class="text-2xl sm:text-4xl font-black tracking-tight mb-3 uppercase">
+                    FAÇA UM <span class="text-brandBlue">ORÇAMENTO RÁPIDO</span>
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm">
+                    Preencha os campos abaixo e receba um pré-orçamento personalizado direto no nosso WhatsApp em segundos.
+                </p>
+            </div>
+
+            <form id="quoteForm" onsubmit="sendWhatsAppQuote(event)" class="relative z-10 flex flex-col gap-5 max-w-lg mx-auto">
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Seu Nome</label>
+                    <input type="text" id="clientName" required placeholder="Ex: Carlos Silva" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brandBlue transition-all">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Tipo de Veículo</label>
+                        <select id="vehicleType" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandBlue transition-all">
+                            <option value="Carro de Passeio">Carro de Passeio</option>
+                            <option value="SUV / Picape">SUV / Picape</option>
+                            <option value="Caminhão">Caminhão</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Serviço Desejado</label>
+                        <select id="serviceType" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandBlue transition-all">
+                            <option value="Polimento Técnico e Espelhamento">Polimento Técnico</option>
+                            <option value="Aspiração Interna">Aspiração Interna</option>
+                            <option value="Lavagem Detalhada">Lavagem Detalhada</option>
+                            <option value="Enceramento Profissional">Enceramento Profissional</option>
+                            <option value="Revitalização de Faróis">Revitalização de Faróis</option>
+                            <option value="Pacote Completo">Pacote Completo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Observações (Opcional)</label>
+                    <textarea id="clientNotes" rows="3" placeholder="Ex: O carro possui alguns riscos mais profundos no capô..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brandBlue transition-all resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full mt-2 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm shadow-xl shadow-brandBlue/30 hover:scale-[1.02] transition-all duration-300">
+                    <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+                    Solicitar Orçamento via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PERGUNTAS FREQUENTES (FAQ) -->
+    <section class="py-24 px-4 max-w-4xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-12 text-center uppercase">PERGUNTAS <span class="text-brandBlue">FREQUENTES</span></h2>
+
+        <div class="flex flex-col gap-4">
+            <!-- FAQ Item 1 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden transition-all">
+                <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-sm sm:text-base text-white focus:outline-none">
+                    <span>Quanto tempo demora o polimento e acabamento espelhado?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    <p class="pb-6">O tempo varia de acordo com o porte do veículo (carros ou caminhões) e o estado da pintura. Em média, o processo completo leva de um a dois dias para garantir o mais alto padrão de brilho.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden transition-all">
+                <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-sm sm:text-base text-white focus:outline-none">
+                    <span>Vocês atendem caminhões?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    <p class="pb-6">Sim! Contamos com estrutura preparada para realizar polimento, aspiração interna e cuidados especializados tanto em veículos de passeio quanto em caminhões.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden transition-all">
+                <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-sm sm:text-base text-white focus:outline-none">
+                    <span>Precisa agendar horário?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    <p class="pb-6">Sim, recomendamos o agendamento prévio via WhatsApp para garantir atendimento exclusivo e o tempo ideal de dedicação ao seu veículo.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden transition-all">
+                <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-sm sm:text-base text-white focus:outline-none">
+                    <span>O que inclui a aspiração interna?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    <p class="pb-6">Nossa aspiração interna é completa, cobrindo bancos, carpetes, tapetes e cantinhos difíceis, deixando o interior limpo, renovado e agradável.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="bg-cardSurface border border-slate-800 rounded-2xl overflow-hidden transition-all">
+                <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-sm sm:text-base text-white focus:outline-none">
+                    <span>Qual é o endereço da oficina?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    <p class="pb-6">Estamos localizados em {{ADDRESS}}.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA & FOOTER -->
+    <footer class="bg-black/80 border-t border-slate-900 pt-20 pb-12 mt-20">
+        <!-- Call to Action Box -->
+        <div class="max-w-4xl mx-auto px-4 text-center mb-20">
+            <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+                AGENDE AGORA E VEJA A <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">TRANSFORMAÇÃO</span> NO SEU VEÍCULO
+            </h2>
+            <p class="text-slate-400 text-sm mb-8">Entre em contato e garanta um atendimento profissional para o seu carro ou caminhão.</p>
+            <a href="https://wa.me/{{WHATSAPP}}" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-base shadow-xl shadow-brandBlue/30 hover:scale-105 transition-all duration-300">
+                <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+                Falar no WhatsApp
+            </a>
+        </div>
+
+        <!-- Main Footer Links / Info -->
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-slate-900/80 items-center text-xs text-slate-400">
+            <!-- Brand / Logo info -->
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center font-black text-white">{{SHORT_INITIAL}}</div>
+                <div>
+                    <span class="block font-bold text-white text-sm">{{SHORT_NAME}}</span>
+                    <span class="text-[10px] text-slate-500 uppercase">Estética Automotiva</span>
+                </div>
+            </div>
+
+            <!-- Contact info -->
+            <div class="flex flex-col gap-2 md:items-center">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4 text-brandBlue"></i>
+                    <span>{{PHONE_DISPLAY}}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-brandBlue"></i>
+                    <span>{{ADDRESS}}</span>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="flex flex-col md:items-end gap-1 text-right">
+                <p>&copy; {{BUSINESS_NAME}} - Todos os Direitos Reservados</p>
+                <p class="text-slate-500">{{CITY}}</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para inicializar ícones, FAQ, Slider e Orçamento WhatsApp -->
+    <script>
+        lucide.createIcons();
+
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Script do Slider de Antes & Depois Interativo
+        const slider = document.getElementById('comparisonSlider');
+        const beforeWrapper = document.getElementById('beforeImageWrapper');
+        const divider = document.getElementById('sliderDivider');
+        const beforeImg = document.getElementById('beforeImg');
+
+        function updateImageWidth() {
+            if (slider && beforeImg) {
+                beforeImg.style.width = slider.offsetWidth + 'px';
+            }
+        }
+        window.addEventListener('resize', updateImageWidth);
+        updateImageWidth();
+
+        function trackMovement(clientX) {
+            if (!slider) return;
+            const rect = slider.getBoundingClientRect();
+            let positionX = clientX - rect.left;
+
+            if (positionX < 0) positionX = 0;
+            if (positionX > rect.width) positionX = rect.width;
+
+            const percentage = (positionX / rect.width) * 100;
+
+            beforeWrapper.style.width = percentage + '%';
+            divider.style.left = percentage + '%';
+        }
+
+        let isDragging = false;
+        if (slider) {
+            slider.addEventListener('mousedown', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                trackMovement(e.clientX);
+            });
+
+            // Suporte a Toque (Celulares e Tablets)
+            slider.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('touchend', () => isDragging = false);
+            slider.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                trackMovement(e.touches[0].clientX);
+            });
+        }
+
+        // Função para formatar e enviar o orçamento direto para o WhatsApp
+        function sendWhatsAppQuote(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('clientName').value;
+            const vehicle = document.getElementById('vehicleType').value;
+            const service = document.getElementById('serviceType').value;
+            const notes = document.getElementById('clientNotes').value;
+
+            const whatsappNumber = "{{WHATSAPP}}";
+
+            let message = `Olá! Meu nome é *${name}*.\n\n`;
+            message += `Gostaria de solicitar um orçamento:\n`;
+            message += `🚗 *Veículo:* ${vehicle}\n`;
+            message += `✨ *Servício:* ${service}\n`;
+            if (notes.trim() !== "") {
+                message += `📝 *Detalhes:* ${notes}\n`;
+            }
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
